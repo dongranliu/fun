@@ -1,6 +1,6 @@
 # Introduction
 
-Raspberry Pi3 玩法。
+redis 与 redis-py 学习。
 
 # index
 

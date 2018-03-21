@@ -1,6 +1,6 @@
 # Introduction
 
-Raspberry Pi3 玩法。
+mysql 与 sqlalchemy 学习。
 
 # index
 
