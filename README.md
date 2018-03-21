@@ -1,6 +1,6 @@
 ## fun
 
-**Have fun with the code**
+Have fun with the code！
 
 ## Table of Contents
 
@@ -9,6 +9,10 @@
 - [ ] [python](./python/README.md)
 
 - [ ] [mysql](./mysql/README.md)
+
+- [ ] [redis](./redis/README.md)
+
+- [ ] [Raspberry Pi](./pi/README.md)
 
 - [ ] [Elasticsearch](./elasticsearch/README.md)
 
