@@ -16,6 +16,8 @@ Have fun with the code！
 
 - [ ] [Elasticsearch](./elasticsearch/README.md)
 
+- [ ] [kafka](./kafka/README.md)
+
 ## contribution
 
 [问题反馈](https://github.com/past-memories/fun/issues)
