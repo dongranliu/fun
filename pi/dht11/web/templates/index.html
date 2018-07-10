@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>温湿度监控</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/layui.css">
+    <script src="../static/layui.js"></script>
+</head>
+<body>
+<table class="layui-table" lay-even lay-skin="row" lay-size="lg">
+  <colgroup>
+    <col width="200">
+    <col width="300">
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>时间</th>
+      <th>温度</th>
+      <th>湿度</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for i in d %}
+    <tr>
+      <td>{{ i.tid }}</td>
+      <td>{{ i.nowtime }}</td>
+      <td>{{ i.temperature }}</td>
+      <td>{{ i.humidity }}</td>
+    </tr>
+      {% endfor %}
+  </tbody>
+</table>
+</body>
