@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["MYSQL_HOST"] = "host"
 app.config["MYSQL_USER"] = "user"
 app.config["MYSQL_PASSWORD"] = "passwd"
-app.config["MYSQL_DB"] = "th"
+app.config["MYSQL_DB"] = "db"
 app.config["MYSQL_CHARSET"] = "utf8"
 mysql = MySQL(app)
 
@@ -25,11 +25,7 @@ def hello():
 @app.route("/test/")
 def return_info():
     cur = mysql.connection.cursor()
-    cur.execute('select max(tid) from info')
-    # 查询出最大tid
-    max_tid = cur.fetchone()[0]
-    next_id = max_tid - 6
-    cur.execute("select tid, nowtime, temperature, humidity from info where tid between %s and %s", (next_id, max_tid))
+    cur.execute("select * from (select * from info order by tid desc limit 10) info order by tid")
     values = cur.fetchall()
     cur.close()
     d = list()

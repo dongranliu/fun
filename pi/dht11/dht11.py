@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import MySQLdb
 import time
 
-# BCM编号方式的17对应树莓派的pin11
+# BCM编号方式的20对应树莓派的pin38
 channel = 20
 data = []
 j = 0

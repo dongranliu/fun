@@ -14,7 +14,7 @@ DHT11数字温湿度传感器是一款含有已校准数字信号输出的温湿
 
 * info.sql 数据表结构
 * dht11.py 读取数据并存到数据库
-* server 读取数据并输出到网页
+* server.py 读取数据并输出到网页
 * index.html 主页
 * layui.css layui css文件
 * layui.js layui.js文件
