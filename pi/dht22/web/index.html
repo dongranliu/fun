@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/index.css">
+</head>
+
+<body>
+<el-container>
+<div id="app" style="width: 411px">
+    <template>
+        <el-table
+                :data="tableData"
+                border
+                stripe
+                style="width: 100%">
+            <el-table-column
+                    prop="tid"
+                    label="tid"
+                    width="80">
+            </el-table-column>
+            <el-table-column
+                    prop="nowtime"
+                    label="时间"
+                    width="170">
+            </el-table-column>
+            <el-table-column
+                    prop="temperature"
+                    label="温度"
+                    width="80">
+            </el-table-column>
+            <el-table-column
+                    prop="humidity"
+                    label="湿度"
+                    width="80">
+            </el-table-column>
+        </el-table>
+    </template>
+</div>
+</el-container>
+</body>
+<script src="lib/vue.js"></script>
+<script src="lib/axios.min.js"></script>
+<script src="lib/index.js"></script>
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data() {
+            return {
+                tableData: []
+            }
+        },
+        mounted() {
+            var data = []
+            var _this = this
+            axios.get("http://127.0.0.1:8000/info")
+                .then(function (response) {
+                    _this.tableData = response.data.data;
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
+        }
+    })
+</script>
+</html>
