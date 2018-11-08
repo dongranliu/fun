@@ -56,6 +56,7 @@ func info(c echo.Context) error {
 		panic(err)
 	}
 	defer data.Close()
+	defer con.Close()
 
 	result := Infoes{}
 	result.Code = 0
